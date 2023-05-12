@@ -10,6 +10,7 @@ call SourceConfigFile('plugins')
 call SourceConfigFile('appearance')
 call SourceConfigFile('files')
 call SourceConfigFile('git')
+call SourceConfigFile('lsp')
 
 autocmd VimEnter * if filereadable("scripts.vim") | source scripts.vim | endif
 

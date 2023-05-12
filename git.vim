@@ -5,7 +5,9 @@ let g:gitgutter_sign_added = '│'
 let g:gitgutter_sign_modified = '│'
 let g:gitgutter_sign_removed = '_'
 let g:gitgutter_sign_removed_first_line = '‾'
-let g:gitgutter_sign_modified_removed = '│'
+let g:gitgutter_sign_modified_removed = '│' 
+
+let g:gitgutter_sign_priority = 9
 
 autocmd ColorScheme * highlight SignColumn            guibg=#343f44
 autocmd ColorScheme * highlight GitGutterAdd          guibg=#343f44 guifg=#a7c080

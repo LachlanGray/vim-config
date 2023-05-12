@@ -12,5 +12,7 @@ call plug#begin()
 	Plug 'thaerkh/vim-indentguides'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'LachlanGray/lmql-syntax'
 call plug#end()
 
