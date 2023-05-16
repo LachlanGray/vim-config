@@ -40,7 +40,7 @@ command! DeleteBuffers call fzf#run(fzf#wrap({
 \ }))
   
 "NOTE: you can add bindings to fzf like: --bind ctrl-a:select-all+accept
-
+"TODO: setup scroll in preview window using --bind option. See man fzf for details.
 
 " fzf mappings """"""""""""""""
 

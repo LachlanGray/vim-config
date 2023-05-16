@@ -9,7 +9,8 @@ set backspace=2
 set nocompatible
 set fileencoding=utf-8
 set encoding=utf-8
-
+set completeopt=menu,noinsert
+set wildmenu
 
 " appearance
 set list

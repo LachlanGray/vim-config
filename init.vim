@@ -11,11 +11,17 @@ call SourceConfigFile('appearance')
 call SourceConfigFile('files')
 call SourceConfigFile('git')
 call SourceConfigFile('lsp')
+call SourceConfigFile('completions')
+
+" iterate over files in ./scripts/ and source each one
+for file in split(globpath(g:vim_config_path . 'scripts/', '*.vim'), '\n')
+  exec 'source ' . file
+endfor
+
 
 autocmd VimEnter * if filereadable("scripts.vim") | source scripts.vim | endif
 
 
-"	- TODO: lsp https://github.com/yegappan/lsp
 "	- TODO: copilot https://github.com/github/copilot.vim
 "	    - you can check if the popup is open with: echo &pumvisible
 "	    - then, you can interpret tab based on this elegantly:
