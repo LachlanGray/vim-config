@@ -33,9 +33,9 @@ nnoremap <C-w>t :call ExpandFileAtCursor()<CR>
 "TODO: mapping that checks if the screen is shifted by "z" command, if so
 "remap 0 to %
 
+" terminal """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup TerminalSettings
   autocmd!
   autocmd TerminalOpen * if bufname('%') !=# 'lf' | tnoremap <buffer> kj <C-\><C-n> | endif
 augroup END
-
 

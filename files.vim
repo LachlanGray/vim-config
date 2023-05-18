@@ -1,6 +1,8 @@
 
 " fzf """"""""""""""""""""""""""""""""""""""""
 
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules,venv}/*"'
+
 " custom fzf functions """"""""""
 
 " override to remove preview
@@ -8,7 +10,7 @@ command! -bang -nargs=? -complete=dir
     \ Files call fzf#vim#files(
           \ <q-args>,
           \ {'options': [
-          \     '--no-preview'
+          \     '--no-preview',
           \ ]},
           \ <bang>0
     \ )
