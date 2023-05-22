@@ -10,11 +10,12 @@ set nocompatible
 set fileencoding=utf-8
 set encoding=utf-8
 set completeopt=menu,noinsert
-set wildmenu
 
-" appearance
-set list
-" set listchars=tab:\|·,trail:-
+set wildmenu wildoptions=pum
+
+" indent guides
+" set list
+" autocmd BufEnter shiftwidth execute 'setlocal listchars=trail:·,tab:│\ ,multispace:┆' . repeat('\ ', &sw - 1)
 
 " highlight SignColumn guibg=#343f44
 
@@ -25,12 +26,7 @@ set nowrap
 set autoindent
 set tabstop=4
 set shiftwidth=4
-
-" set noexpandtab
-" autocmd FileType * setlocal noexpandtab tabstop=4 shiftwidth=4
-
-
-
+set expandtab
 
 set termguicolors
 

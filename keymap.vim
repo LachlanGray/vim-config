@@ -34,8 +34,31 @@ nnoremap <C-w>t :call ExpandFileAtCursor()<CR>
 "remap 0 to %
 
 " terminal """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 augroup TerminalSettings
   autocmd!
   autocmd TerminalOpen * if bufname('%') !=# 'lf' | tnoremap <buffer> kj <C-\><C-n> | endif
+  autocmd TerminalOpen * if bufname('%') !=# 'lf' | nnoremap <buffer> , :silent! call term_sendkeys(bufnr('%'), "\x1b[A")<CR>A<C-\><C-n>
+  autocmd TerminalOpen * if bufname('%') !=# 'lf' | nnoremap <buffer> ; :silent! call term_sendkeys(bufnr('%'), "\x1b[B")<CR>A<C-\><C-n>
 augroup END
+
+
+" augroup TerminalSettings
+"   autocmd!
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | tnoremap <buffer> kj <C-\><C-n> | endif
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | nnoremap <buffer> , <C-\><C-n>i<C-P><Esc> | endif
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | nnoremap <buffer> ; <C-\><C-n>i<C-N><Esc> | endif
+" augroup END
+
+" augroup TerminalSettings
+"   autocmd!
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | tnoremap <buffer> kj <C-\><C-n> | endif
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | nmap <buffer> , A<C-P><C-\><C-n> | endif
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | nmap <buffer> ; A<C-N><C-\><C-n> | endif
+" augroup END
+
+" augroup TerminalSettings
+"   autocmd!
+"   autocmd TerminalOpen * if bufname('%') !=# 'lf' | tnoremap <buffer> kj <C-\><C-n> | endif
+" augroup END
 

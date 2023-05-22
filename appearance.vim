@@ -1,9 +1,12 @@
 
+" colourscheme
 let g:everforest_background = 'medium'
 set background=dark
 let g:everforest_better_performance = 1
 colorscheme everforest
 
+
+" lightline
 function! GetGitGutterStatus() abort
   let [added, modified, removed] = GitGutterGetHunkSummary()
   let parts = []
@@ -26,7 +29,7 @@ endfunction
 
 function! GitOrDiagnostics() abort
   let diagnostic_counts = lsp#get_buffer_diagnostics_counts()
-  let symbols = {'error': '✖ ', 'warning': '⚠ ', 'information': 'ℹ ', 'hint': '★ '}
+  let symbols = {'error': '✖ ', 'warning': '⚠ ', 'information': '☀ ', 'hint': '★ '}
   let parts = []
 
   for level in ['error', 'warning', 'hint', 'information']
@@ -83,7 +86,7 @@ let g:lightline = {
         \            [ 'gitbranch', 'filetype' ] ]
  \  },
   \ 'inactive':{
-        \ 'left': [ [ 'filename' ] ],
+        \ 'left': [ [ 'readonly', 'filename', 'modified'] ],
         \ 'right': [ [ 'lineinfo' ],
         \            [ 'percent' ] ]
   \ },

@@ -24,6 +24,6 @@ let g:gitgutter_map_keys = 0
 nnoremap ]c <Plug>(GitGutterNextHunk)
 nnoremap [c <Plug>(GitGutterPrevHunk)
 nnoremap <leader>gd <Plug>(GitGutterPreviewHunk)
-nnoremap <Leader>gb <cmd><C-u>call gitblame#echo()<CR>
+nnoremap <Leader>gb <cmd>call gitblame#echo()<CR>
 
 
